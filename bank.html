@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Secure Bank</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #2980b9;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #1abc9c;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    #greeting {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+  <header>Welcome to Secure Bank</header>
+  <img src="logo.jpg" alt="online bank">
+  <p>Your trusted partner for safe and convenient online banking. Access your accounts, manage finances, and much more—right here.</p>
+  <div class="buttons">
+	<a href="main.html" id="main">Home Page</a>
+    <a href="login.html" id="loginBtn">Login</a><br><br>
+    <a href="signup.html" id="signupBtn">Sign Up</a>
+	  <a href="my_account.html" id="my_account">Account </a><br><br>
+	  <a href="customer_care.html" id="customer_care">Customer care</a>
+    <a href="contact.html" id="contact-us">contact</a>
+  </div>
+  <div id="greeting"></div>
+  <footer>&copy; 2025 Secure Bank. All rights reserved.</footer>
+
+  <script>
+    // Display a greeting based on time of day
+    const greetingElement = document.getElementById("greeting");
+    const hour = new Date().getHours();
+    let greeting = "";
+
+    if (hour < 12) {
+      greeting = "Good Morning!";
+    } else if (hour < 18) {
+      greeting = "Good Afternoon!";
+    } else {
+      greeting = "Good Evening!";
+    }
+
+    greetingElement.textContent = greeting;
+
+    // Optional: Add click event handlers
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      console.log("Login button clicked");
+    });
+
+    document.getElementById("signupBtn").addEventListener("click", () => {
+      console.log("Signup button clicked");
+    });
+  </script>
+</body>
+</html>
